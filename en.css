@@ -1,0 +1,236 @@
+/* Existing Style Updates */
+
+body {
+	font-family: "Avenir W01", Arial, sans-serif;
+}
+body.lab_sticky_footer>footer {
+	display: none;
+}
+.description-block .powered-by {
+	display: none;
+}
+.large-header .gradient {
+	display: none;
+}
+.top-nav h1 a img {
+    display: none;
+}
+body>footer {
+	overflow: hidden;
+}
+body.lab_permanent_header.hub-page header {
+	max-height: 130px;
+}
+.large-header {
+	background-color: #fefefe;
+}
+.search-drop-down {
+	top: 121px;
+}
+.share-hub, .share-item {
+	top: 121px;
+}
+.top-nav {
+	margin-top:30px;    
+	position: relative;
+}
+.top-nav .left-nav.desktop {
+	margin-left: 160px;
+}
+</style>
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" />
+<link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/2efe21fa-d468-4c24-a867-67a8c2fb7004.css" />
+<style type="text/css">
+
+/* New Styles */
+
+.fontawesome-text {
+	display: none;
+} 
+.planview-header {
+	display: block;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+img.planview-logo {
+	width: 178px;
+	height: 45px;
+	margin: 10px 10px -20px 10px;
+}
+ul.planview-nav-mobil {
+	background-color: #FFF;
+	border: 1px solid #636363;
+	display: none;
+	list-style: none;
+	position: absolute;
+	z-index: 6001;
+}
+ul.planview-nav-mobil li,
+ul.planview-nav-desktop li {
+	list-style-type: none;
+	white-space: nowrap;
+}
+ul.planview-nav-mobil li a,
+ul.planview-nav-desktop li a {
+	color: #636363;
+	display: block;
+	font-size: 14px;
+	padding: 3px 1em;
+	text-transform: uppercase;
+}
+ul.planview-nav-mobil li a:hover,
+ul.planview-nav-desktop li a:hover {
+	background-color: #f9f9f9;
+	color: #000;
+	text-decoration: none;
+}
+button#planview-nav-mobil-toggle-button {
+	float: right;
+	margin-top: -1em;
+}
+ul.planview-nav-desktop {
+	display: none;
+}
+.is-fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin-top: 0;
+    height: 60px;
+    width: 100%;
+}
+
+.all-right-reserved {
+	display: block;
+}
+footer#site-footer {
+	background-color: #525252;
+	display: block;
+	width: 100%;
+	padding: 5px 50px;
+	box-sizing: border-box;
+	color: white;
+	position: relative;
+	text-align: center;
+}
+footer#site-footer #footer-navs {
+	padding-left:1em;
+}
+footer#site-footer a {
+	color: white;
+	text-decoration: none;
+}
+footer#site-footer a:hover {
+	color: white;
+	text-decoration: underline;
+}
+ul#planview-footer-social-menu {
+    display: block;	
+	float: none;
+	list-style: none;
+}
+ul#planview-footer-social-menu li {
+	display: inline;
+	list-style-type: none;
+}
+ul#planview-footer-social-menu li a {
+    padding: 1em;
+}
+
+/* Responsive Styles */
+
+/* Extra-small devices */
+/* this prevents the top planview logo and the hamburger from displaying on top of each other */
+@media screen and (max-width: 400px) {
+	img.planview-logo {
+		width: 125px;
+		height: 32px;
+	}
+	.planview-header { 
+		margin-left: 10px;
+		margin-right: 10px;
+	}	
+}
+@media screen and (max-width: 500px) {
+	.planview-header { 
+		margin-left: 10%;
+		margin-right: 10%;
+	}	
+}
+
+/* Small devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+	.all-right-reserved {
+		display: inline;
+	}
+	footer#site-footer {
+	  	text-align: left;
+	}
+}
+
+/* Medium and large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+	.planview-header {
+		margin-left: 40px;
+		margin-right: 50px;
+	}
+	ul#planview-footer-social-menu {
+		float: right;
+		margin-top: -2em;
+	}
+	button#planview-nav-mobil-toggle-button {
+		display: none;
+	}
+	ul.planview-nav-mobil {
+		display: none;
+	}	
+	ul.planview-nav-desktop {
+		background-color: transparent;
+		border: none;
+		display: block;
+		float: right;
+		position: relative;
+	}
+	ul.planview-nav-desktop li {
+		display: inline;
+	}
+	ul.planview-nav-desktop li a {
+		display: inline;
+		font-size: 14px;
+		padding: 1em .75em;
+	}
+	ul.planview-nav-desktop li a:hover {
+		background-color: transparent;
+	}
+}
+#hub-cta-29188 {
+background: url('http://www.planview.com/wp-content/uploads/2015/07/cta-background-gartner-mq.jpg') !important;
+background-color: initial !important; 
+background-repeat: no-repeat !important;
+background-origin: padding-box !important;
+background-size: cover !important;
+}
+
+#hub-cta-29218 {
+background: url('http://www.planview.com/wp-content/uploads/2015/07/cta-background-capacity-quad.jpg') !important;
+background-color: initial !important; 
+background-repeat: no-repeat !important;
+background-origin: padding-box !important;
+background-size: cover !important;
+}
+
+#hub-cta-29224 {
+background: url('http://www.planview.com/wp-content/uploads/2015/07/cta-background-rmcp.jpg') !important;
+background-color: initial !important; 
+background-repeat: no-repeat !important;
+background-origin: padding-box !important;
+background-size: cover !important;
+}
+
+#hub-cta-30896 {
+background: url('http://www.planview.com/wp-content/uploads/2015/08/onepercent.jpg') !important;
+background-color: initial !important; 
+background-repeat: no-repeat !important;
+background-origin: padding-box !important;
+background-size: cover !important;
+}
