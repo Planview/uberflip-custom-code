@@ -81,5 +81,5 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); 
 ga('create', 'UA-16646450-1', 'auto', {'name': 'newTracker', 'allowLinker': true}); 
 ga('newTracker.require', 'linker'); 
-ga('newTracker.linker:autoLink', ['www.planview.com', 'www.planview.de', 'www.planview.fr'] ); 
+ga('newTracker.linker:autoLink', ['go.planview.com', 'www.planview.com', 'bibliothek.planview.de', 'www.planview.de', 'www.planview.fr'] ); 
 ga('newTracker.send', 'pageview'); 
