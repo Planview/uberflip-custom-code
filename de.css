@@ -38,7 +38,12 @@ body.lab_permanent_header.hub-page header {
 	margin-left: 160px;
 }
 
+body.lab_sticky_footer #moveToTop {
+    bottom: 85px;
+}
 .page-width {
+	margin-left:auto;
+	margin-right:auto;
 	max-width: 1100px !important;
 }
 @media only screen and (max-width: 9999px) {
@@ -96,6 +101,7 @@ ul.planview-nav-desktop li a:hover {
 }
 button#planview-nav-mobil-toggle-button {
 	float: right;
+	margin-right: 2em;
 	margin-top: -1em;
 }
 ul.planview-nav-desktop {
