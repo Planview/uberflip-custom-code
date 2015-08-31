@@ -1,9 +1,24 @@
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga'); 
+
 Hubs.onLoad = function(){
 	resizeLimelightPlayer('Hubs.onLoad');
+
+	ga('create', 'UA-16646450-1', 'auto', {'name': 'newTracker', 'allowLinker': true}); 
+	ga('newTracker.require', 'linker'); 
+	ga('newTracker.linker:autoLink', ['go.planview.com', 'www.planview.com', 'bibliothek.planview.de', 'www.planview.de', 'www.planview.fr'] ); 
+	ga('newTracker.send', 'pageview', window.location.pathname);
 };
 
 Hubs.onPageChange = function() {       
 	resizeLimelightPlayer('Hubs.onPageChange');
+
+	ga('create', 'UA-16646450-1', 'auto', {'name': 'newTracker', 'allowLinker': true}); 
+	ga('newTracker.require', 'linker'); 
+	ga('newTracker.linker:autoLink', ['go.planview.com', 'www.planview.com', 'bibliothek.planview.de', 'www.planview.de', 'www.planview.fr'] ); 
+	ga('newTracker.send', 'pageview', window.location.pathname);
 };
 
 $( ".large-header" ).html( $( "#planview-header-wrapper" ).html() ).removeClass( "large-header" ).css( { "display" : "block", "background" : "none" } );
@@ -74,12 +89,3 @@ function resizeLimelightPlayer(msg) {
 		});
 	}
 }
-
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga'); 
-ga('create', 'UA-16646450-1', 'auto', {'name': 'newTracker', 'allowLinker': true}); 
-ga('newTracker.require', 'linker'); 
-ga('newTracker.linker:autoLink', ['go.planview.com', 'www.planview.com', 'bibliothek.planview.de', 'www.planview.de', 'www.planview.fr'] ); 
-ga('newTracker.send', 'pageview'); 
