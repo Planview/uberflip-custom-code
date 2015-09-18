@@ -37,6 +37,21 @@ body.lab_permanent_header.hub-page header {
 .top-nav .left-nav.desktop {
 	margin-left: 160px;
 }
+
+body.lab_sticky_footer #moveToTop {
+    bottom: 85px;
+}
+.page-width {
+	margin-left:auto;
+	margin-right:auto;
+	max-width: 1100px !important;
+}
+@media only screen and (max-width: 9999px) {
+	.page-aligner {
+	 	max-width: 1100px !important;
+	}
+}
+
 </style>
 <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" />
 <link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/2efe21fa-d468-4c24-a867-67a8c2fb7004.css" />
@@ -86,6 +101,7 @@ ul.planview-nav-desktop li a:hover {
 }
 button#planview-nav-mobil-toggle-button {
 	float: right;
+	margin-right: 2em;
 	margin-top: -1em;
 }
 ul.planview-nav-desktop {
@@ -203,6 +219,25 @@ ul#planview-footer-social-menu li a {
 		background-color: transparent;
 	}
 }
+
+
+#hub-cta-31961 {
+background: url('https://www.planview.com/wp-content/uploads/2015/08/ebook1.jpg') !important;
+background-color: initial !important; 
+background-repeat: no-repeat !important;
+background-origin: padding-box !important;
+background-size: cover !important;
+}
+
+
+#hub-cta-32003 {
+background: url('https://www.planview.com/wp-content/uploads/2015/08/info-thumb1.jpg') !important;
+background-color: initial !important; 
+background-repeat: no-repeat !important;
+background-origin: padding-box !important;
+background-size: cover !important;
+}
+
 #hub-cta-29188 {
 background: url('http://www.planview.com/wp-content/uploads/2015/07/cta-background-gartner-mq.jpg') !important;
 background-color: initial !important; 
