@@ -5,6 +5,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
 Hubs.onLoad = function(){
 	resizeLimelightPlayer('Hubs.onLoad');
+	changeWebcastLinkText();
 
 	ga('create', 'UA-16646450-1', 'auto', {'name': 'newTracker', 'allowLinker': true}); 
 	ga('newTracker.require', 'linker'); 
@@ -14,6 +15,7 @@ Hubs.onLoad = function(){
 
 Hubs.onPageChange = function() {       
 	resizeLimelightPlayer('Hubs.onPageChange');
+	changeWebcastLinkText();
 
 	ga('create', 'UA-16646450-1', 'auto', {'name': 'newTracker', 'allowLinker': true}); 
 	ga('newTracker.require', 'linker'); 
@@ -98,6 +100,23 @@ function setPageAlignerClass() {
 	$( "#moveToTop" ).css( "margin-left", moveToTopMarginLeft);
 }
 
+function changeWebcastLinkText() {
+	if (window.location.href.indexOf("webcast") > -1) { 		
+		$( "a:contains('Artikel lesen')" ).each(function() {
+			$( this ).html( "Video anschauen" );
+		});
+	} else if ($( ".bread-crumbs a[data-page-title|='Webcasts']" ).is(':contains("Webcasts")')) {
+		// look for "Webcasts" in the breadcrumb, and then change text on the page
+		$( "span.title:contains('Diesen Artikel teilen')" ).html( "Diesen Webcast teilen" );
+		$( "li.share-text:contains('Diesen Artikel teilen')" ).html( "Diesen Webcast teilen" );
+		$( "p.no-more:contains('Keine vorherigen Artikel')" ).html( "Keine vorherigen Webcast" );
+		$( "p.no-more:contains('Keine weiteren Artikel')" ).html( "Keine weiteren Webcast" );
+		$( "h6:contains('Nächster Artikel')" ).html( "Nächster Webcast" );
+		$( "h6:contains('Vorherige Artikel')" ).html( "Vorherige Webcast" );
+		$( "span.title:contains('Diesen Artikel teilen')" ).html( "Diesen Webcast teilen" );	
+	}
+}
+
 function resizeLimelightPlayer(msg) {
 	//console.log('resizeLimelightPlayer - ' + msg);
 	if ( $('.limelight-video-respond').length ) { //if Limelight player exists
@@ -109,7 +128,7 @@ function resizeLimelightPlayer(msg) {
 			newHeight,
 			newWidth;
 	
-			// See if we have the aspect ratio already
+			// see if we have the aspect ratio already
 			if ( ! $wrapper.data('aspectRatio') ) {
 				var aspectRatio = ( $video.attr('height') - controlsHeight ) / ( $video.attr('width') - controlsWidth );
 				$wrapper.data('aspectRatio', aspectRatio );
@@ -120,6 +139,16 @@ function resizeLimelightPlayer(msg) {
 	
 			$video.attr('height', newHeight);
 			$video.attr('width', newWidth);
+			
+			// this code is needed for mobile		
+			$(".limelight-player-footprint").removeAttr( 'height' );
+			$(".limelight-player-footprint").removeAttr( 'width' );
+			$(".LimelightEmbeddedPlayer").removeAttr( 'height' );
+			$(".LimelightEmbeddedPlayer").removeAttr( 'width' );
+			$(".limelight-player-footprint").height(newHeight);
+            $(".limelight-player-footprint").width(newWidth);
+			$(".LimelightEmbeddedPlayer").height(newHeight);
+            $(".LimelightEmbeddedPlayer").width(newWidth);
 		});
 	}
 }
